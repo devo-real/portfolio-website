@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>devoReal | Programmer & Musician</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <title>devoReal's site</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.simpleicons.org/simple-icons.css">
-  <link rel="icon" type="image/jpeg" href="images/pfp.jpg">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <!-- Navigation -->
+  <button class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+
   <nav>
     <div class="container">
       <a href="#" class="logo">devoReal</a>
@@ -18,25 +19,25 @@
         <li><a href="#about">about</a></li>
         <li><a href="#shenanigans">shenanigans</a></li>
         <li><a href="#links">links</a></li>
+        <li><a href="#update">site updates</a></li>
+        <li><a href="music.html">music and wips</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
   <header class="hero">
     <div class="container">
       <h1>hello, you're on <span>devoReal's</span> website</h1>
       <p>programmer, guitarist, drummer, bassist, sometimes a content creator</p>
       <div class="hero-icons">
-        <i class="fas fa-code"></i>
-        <i class="fas fa-guitar"></i>
-        <i class="fas fa-drum"></i>
-        <i class="fas fa-film"></i>
+        <i class="fas fa-code" aria-hidden="true"></i>
+        <i class="fas fa-guitar" aria-hidden="true"></i>
+        <i class="fas fa-drum" aria-hidden="true"></i>
+        <i class="fas fa-film" aria-hidden="true"></i>
       </div>
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
       <h2>"whos that devoReal geeza anyway"</h2>
@@ -45,123 +46,132 @@
           <p>i do a lot of things.</p>
           <p>i can program Python and C#, and i'm a musician.</p>
           <ul class="skills-list">
-            <li><i class="fas fa-drum"></i> drummer</li>
-            <li><i class="fas fa-guitar"></i> guitarist</li>
-            <li><i class="fas fa-guitar"></i> bassist</li>
-            <li><i class="fas fa-code"></i> programmer</li>
-            <li><i class="fas fa-music"></i> songwriter</li>
+            <li><i class="fas fa-drum"></i>drummer</li>
+            <li><i class="fas fa-guitar"></i>guitarist</li>
+            <li><i class="fas fa-guitar"></i>bassist</li>
+            <li><i class="fas fa-code"></i>programmer</li>
+            <li><i class="fas fa-music"></i>songwriter</li>
           </ul>
         </div>
         <div class="about-image">
-          <img src="images/pfp.jpg" alt="devoReal profile picture" class="profile-img">
+          <img src="images/pfp.jpg" alt="devoReal profile picture" class="profile-img" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Shenanigans Section -->
   <section id="shenanigans" class="section">
     <div class="container">
       <h2>most of the shenanigans (the important ones)</h2>
       <div class="shenanigans-grid">
-        <!-- Programming Shenanigans -->
         <div class="shenanigan-card">
-          <div class="card-icon">
-            <i class="fas fa-laptop-code"></i>
-          </div>
+          <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
           <h3>Programming - Desmux OS</h3>
           <p>1920x1080 terminal operating system built in C#.</p>
-          <a href="https://github.com/devo-real/desmux" class="btn" target="_blank">
+          <a href="https://github.com/devo-real/desmux" class="btn" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i> GitHub
           </a>
         </div>
 
         <div class="shenanigan-card">
-          <div class="card-icon">
-            <i class="fas fa-terminal"></i>
-          </div>
+          <div class="card-icon"><i class="fas fa-terminal"></i></div>
           <h3>Programming - COSMOS Neofetch</h3>
           <p>Neofetch implementation for COSMOS operating systems.</p>
-          <a href="https://github.com/devo-real/cosmos-neofetchimpl" class="btn" target="_blank">
+          <a href="https://github.com/devo-real/cosmos-neofetchimpl" class="btn" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i> GitHub
           </a>
         </div>
 
-        <!-- Music Shenanigans -->
         <div class="shenanigan-card">
-          <div class="card-icon">
-            <i class="fas fa-compact-disc"></i>
-          </div>
+          <div class="card-icon"><i class="fas fa-compact-disc"></i></div>
           <h3>Music - Holy Roads</h3>
           <div class="embed-container">
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2040357921&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="100%" height="300" title="Holy Roads playlist" loading="lazy"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2040357921&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
           </div>
         </div>
 
         <div class="shenanigan-card">
-          <div class="card-icon">
-            <i class="fas fa-music"></i>
-          </div>
+          <div class="card-icon"><i class="fas fa-music"></i></div>
           <h3>Music - Bytebeat</h3>
           <div class="embed-container">
-            <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2058367284&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+            <iframe width="100%" height="300" title="Bytebeat track" loading="lazy"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2058367284&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
           </div>
         </div>
 
-        <!-- YouTube Shenanigans -->
         <div class="shenanigan-card">
-          <div class="card-icon">
-            <i class="fab fa-youtube"></i>
-          </div>
+          <div class="card-icon"><i class="fab fa-youtube"></i></div>
           <h3>YouTube - Pax Carnis</h3>
           <div class="embed-container">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/QyxVDkeymIU?si=NyTDnfyveGkVab5Z" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="315" title="Pax Carnis video" loading="lazy"
+              src="https://www.youtube.com/embed/QyxVDkeymIU" allowfullscreen></iframe>
           </div>
         </div>
 
         <div class="shenanigan-card">
-          <div class="card-icon">
-            <i class="fas fa-headphones"></i>
-          </div>
+          <div class="card-icon"><i class="fas fa-headphones"></i></div>
           <h3>YouTube - EDM thing</h3>
           <div class="embed-container">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/OLkL_Hz-iyI?si=YGLCGNmpMBD8tXhD" frameborder="0" allowfullscreen></iframe>
+            <iframe width="100%" height="315" title="EDM video" loading="lazy"
+              src="https://www.youtube.com/embed/OLkL_Hz-iyI" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Links Section -->
   <section id="links" class="section">
     <div class="container">
       <h2>the links</h2>
       <div class="links-grid">
-        <a href="https://github.com/devo-real" class="link-card" target="_blank">
-          <i class="fab fa-github"></i>
-          <span>GitHub</span>
+        <a href="https://github.com/devo-real" class="link-card" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i><span>GitHub</span>
         </a>
-        <a href="https://youtube.com/@devo-real" class="link-card" target="_blank">
-          <i class="fab fa-youtube"></i>
-          <span>YouTube</span>
+        <a href="https://youtube.com/@devo-real" class="link-card" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-youtube"></i><span>YouTube</span>
         </a>
-        <a href="https://soundcloud.com/devoreal" class="link-card" target="_blank">
-          <i class="fab fa-soundcloud"></i>
-          <span>SoundCloud</span>
+        <a href="https://soundcloud.com/devoreal" class="link-card" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-soundcloud"></i><span>SoundCloud</span>
         </a>
-        <a href="https://linktr.ee/devoReal" class="link-card" target="_blank">
-          <i class="fas fa-tree"></i>
-          <span>LinkTree</span>
+        <a href="https://linktr.ee/devoReal" class="link-card" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-tree"></i><span>LinkTree</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <section id="update" class="section">
+    <div class="change-logs-container">
+      <h2>site updates</h2>
+      <div class="about-text">
+        <h3>v1.2.0 - 2025-06-30</h3>
+        <ul>
+          <li>added a <a href="music.html">fancy brand new music page</a></li>
+          <li>added the anti-flashbang button (dark or light mode)</li>
+          <li>made navbar smaller cause i think it looks nicer</li>
+        </ul>
+        <br></br>
+        <h3>v1.1.0 - 2025-06-29</h3>
+        <ul>
+          <li>made the website look nicer with icons</li>
+          <li>added some cool little accents in the navbar and hero text</li>
+        </ul>
+        <br></br>
+        <h3>v1.0.0 - 2025-06-28</h3>
+        <ul>
+          <li>released the website</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
-      <p>© 2024 devoReal. All shenanigans reserved.</p>
+      <p>© <span id="year"></span> devoReal. yes the linktree was a deftones reference.</p>
     </div>
   </footer>
+
+  <script src="scripts/theme.js"></script>
 </body>
 </html>

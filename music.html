@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>devoReal's ruckus to play to annoy your neighbors</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <button class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">devoReal</a>
+      <ul>
+        <li><a href="#about">about</a></li>
+        <li><a href="#shenanigans">shenanigans</a></li>
+        <li><a href="#links">links</a></li>
+        <li><a href="#update">site updates</a></li>
+        <li><a href="music.html" class="active">music and wips</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="section container" style="padding-top: 6rem;">
+    <h1>noise i combined to make ruckus</h1>
+    <p>here you can see some unreleased work in progress tracks. you may or may not hate them. i think they're decent 👍</p>
+    <p>you can use these in videos, edits, programs, anything, as long as you credit me, i honestly could not care less</p>
+    <p>to download, click the three dots on the side of the players and hit 'download'</p>
+    <br></br>
+    <div class="music-list">
+      <div class="music-item">
+        <h3>WIP track - Vast</h3>
+        <audio controls preload="metadata">
+          <source src="audio/Vast.mp3" type="audio/mpeg"/>
+        </audio>
+      </div>
+
+      <div class="music-item">
+        <h3>WIP track - Untitled EDM track</h3>
+        <audio controls preload="metadata">
+          <source src="audio/electric muzak.mp3" type="audio/mpeg"/>
+        </audio>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> devoReal. All shenanigans reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/theme.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,47 +1,56 @@
-/* Global Styles */
+/* style.css */
 :root {
   --primary: #5052a5;
   --secondary: #ff6b6b;
-  --dark: #1a1a2e;
-  --light: #f8f9fa;
   --accent: #feca57;
+  --bg: #f8f9fa;
+  --text: #1a1a2e;
+  --card: #ffffff;
+  --nav: #1a1a2e;
+  --nav-text: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --primary: #8f90ff;
+  --secondary: #ff9999;
+  --bg: #1a1a2e;
+  --text: #f8f9fa;
+  --card: #2a2a40;
+  --nav: #2a2a40;
+  --shadow: rgba(255, 255, 255, 0.1);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+  transition: background-color var(--transition), color var(--transition);
 }
 
 body {
-  background-color: var(--light);
-  color: var(--dark);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
   line-height: 1.6;
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: min(90%, 1200px);
   margin: 0 auto;
   padding: 20px;
 }
 
 /* Navigation */
-
 nav {
-  background: var(--dark);
-  color: white;
-  padding: 0.3rem 0; /* reduced from 0.5rem 0 */
   position: fixed;
   width: 100%;
+  background: var(--nav);
+  color: var(--nav-text);
+  padding: 0rem 0; 
   z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-nav a {
-  padding: 0.2rem 0; /* slightly reduced vertical padding */
-  font-size: 0.95rem; /* slightly smaller text */
+  box-shadow: 0 2px 10px var(--shadow);
 }
 
 nav .container {
@@ -52,17 +61,25 @@ nav .container {
 
 nav ul {
   display: flex;
-  list-style: none;
   gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.1rem 0;
+  border-bottom: 2px solid transparent;
 }
 
 nav a:hover {
   color: var(--accent);
-  border-bottom: 2px solid var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .logo {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: var(--accent);
 }
@@ -71,12 +88,12 @@ nav a:hover {
 .hero {
   padding: 6rem 0 3rem;
   text-align: center;
-  background: linear-gradient(135deg, var(--primary), var(--dark));
-  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--nav));
+  color: var(--nav-text);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 2.5rem);
   margin-bottom: 1rem;
 }
 
@@ -86,7 +103,7 @@ nav a:hover {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   margin-bottom: 1.5rem;
   opacity: 0.9;
 }
@@ -97,7 +114,6 @@ nav a:hover {
   gap: 1.5rem;
   font-size: 2rem;
   color: var(--accent);
-  margin-top: 1rem;
 }
 
 /* Sections */
@@ -108,14 +124,14 @@ nav a:hover {
 .section h2 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 4vw, 2rem);
   color: var(--primary);
 }
 
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   align-items: center;
 }
@@ -144,7 +160,7 @@ nav a:hover {
   width: 100%;
   max-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px var(--shadow);
   margin: 0 auto;
   display: block;
 }
@@ -157,26 +173,19 @@ nav a:hover {
 }
 
 .shenanigan-card {
-  background: white;
+  background: var(--card);
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  text-align: center;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: transform var(--transition);
 }
 
 .shenanigan-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .card-icon {
   font-size: 2rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-}
-
-.shenanigan-card h3 {
   color: var(--primary);
   margin-bottom: 1rem;
 }
@@ -187,22 +196,23 @@ nav a:hover {
   overflow: hidden;
 }
 
+/* Buttons */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background: var(--primary);
   color: white;
   padding: 0.6rem 1.2rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
-  transition: all 0.3s ease;
   margin-top: 1rem;
 }
 
 .btn:hover {
   background: var(--accent);
-  color: var(--dark);
-  transform: translateY(-2px);
+  color: var(--text);
 }
 
 /* Links Section */
@@ -215,23 +225,19 @@ nav a:hover {
 }
 
 .link-card {
-  background: white;
-  border-radius: 10px;
-  padding: 1.5rem;
-  text-align: center;
-  text-decoration: none;
-  color: var(--dark);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  background: var(--card);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 5px 15px var(--shadow);
 }
 
 .link-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   color: var(--primary);
 }
 
@@ -242,38 +248,42 @@ nav a:hover {
 
 /* Footer */
 footer {
-  background: var(--dark);
-  color: white;
+  background: var(--nav);
+  color: var(--nav-text);
   text-align: center;
   padding: 2rem 0;
-  margin-top: 2rem;
 }
 
-/* Responsive Design */
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--text);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-  }
-  
-  .hero p {
-    font-size: 1rem;
-  }
-  
   nav ul {
     gap: 1rem;
   }
   
-  .section {
-    padding: 2rem 0;
-  }
-  
-  .section h2 {
-    font-size: 1.8rem;
+  .hero {
+    padding-top: 5rem;
   }
 }
 
@@ -298,4 +308,24 @@ footer {
 
 .soundcloud-credits a:hover {
   text-decoration: underline;
+}
+
+.change-logs-container {
+  max-width: 600px;  
+  margin-left: auto;
+  margin-right: auto; 
+  text-align: left; 
+  padding: 1rem;
+}
+
+.change-logs-container h3 {
+  text-align: center;
+  margin-bottom: 0.5rem; 
+}
+
+audio {
+  width: 100%; 
+  max-width: 700px;  
+  outline: none;  
+  border-radius: 6px; 
 }
