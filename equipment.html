@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>devoReal's things he uses</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <nav>
+    <button class="theme-toggle" aria-label="Toggle theme">
+      <i class="fas fa-moon"></i>
+    </button>
+    <div class="container">
+      <a href="index.html" class="logo">devoReal</a>
+      <ul>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="index.html#shenanigans">shenanigans</a></li>
+        <li><a href="index.html#links">links</a></li>
+        <li><a href="index.html#update">site updates</a></li>
+        <li><a href="music.html">music and wips</a></li>
+        <li><a href="contacts.html">contacts</a></li>
+        <li><a href="equipment.html" class="active">equipment</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="section container" style="padding-top: 6rem;">
+    <h1>the equipment section</h1>
+    <p>things i use sometimes.</p>
+
+    <div class="equipment-list" style="margin-top: 2rem;">
+      <div class="equipment-item">
+        <h3><i class="fas fa-guitar"></i> strange stringed items</h3>
+        <ul>
+          <li>Yamaha Pacifica 22-fret, stratocaster style</li>
+          <li>Epiphone SG Special</li>
+          <li>Ibanez Iceman PS60-SSL</li>
+        </ul>
+      </div>
+      
+      <br></br>
+
+      <div class="equipment-item">
+        <h3><i class="fas fa-drum"></i> McDrums</h3>
+        <ul>
+          <h4>drums</h4>
+          <li>main kit: Sonix 922 Fusion (floor tom, kick drum & single rack tom)</li>
+          <li>snare: Pearl Exporet 1980's 6.5x14in</li>
+          <h4>cymbals</h4>
+          <li>crash 1: Paiste 2002 Classic 18 inch medium crash</li>
+          <li>crash 2: Zildjian A Custom 16 inch</li>
+          <li>ride: Solar by SABIAN 20 inch ride cymbal</li>
+          <li>hi-hats: Meinl Byzance 14 inch</li>
+          <h4>non-drum stuff</h4>
+          <li>sticks: Vater Sugar Maple 7A</li>
+          <li>kick beater: Gibraltar SC-3261 Felt</li>
+          <li>stick bag: DW DSBA2005</li>
+          <li>IEMs: KZ EDX PROs</li>
+          <li>practice pad: Stagg TD-08R</li>
+          <li>kick pedal: Pearl P930 Demonator Single Pedal</li>
+        </ul>
+      </div>
+
+      <br></br>
+
+      <div class="equipment-item">
+        <h3><i class="fas fa-headphones"></i> other audio stuff</h3>
+        <ul>
+          <li>Presonus AudioBox iTwo interface</li>
+          <li>Samson C01 condenser mic</li>
+          <li>Behringer HA400 headphone amp</li>
+        </ul>
+      </div>
+
+      <br></br>
+
+      <div class="equipment-item">
+        <h3><i class="fas fa-desktop"></i> Conputer.</h3>
+        <ul>
+          <li>Main rig: Intel i7-4770, GTX 1650, 16GB RAM</li>
+          <li>OSes: Windows 10 & Ubuntu Linux</li>
+          <li>Monitor 1: BenQ EX240N 165hz</li>
+          <li>Monitor 2: BenQ XL2411P 144hz</li>
+          <li>Keyboard: SKYLOONG GK75</li>
+          <li>Mouse: Razer Basilisk V3</li>
+        </ul>
+      </div>
+
+      <br></br>
+
+      <div class="equipment-item">
+        <h3><i class="fas fa-terminal"></i> software</h3>
+        <ul>
+          <li>DAW: FL Studio 24 Producer Edition</li>
+          <li>IDE: Codium</li>
+          <li>Terminal: CMDer (Windows) & Alacritty (Linux)</li>
+          <li>Linux shell: GNU bash</li>
+        </ul>
+      </div>
+
+      <br></br>
+
+      <div class="equipment-item">
+        <h3><i class="fas fa-music"></i> so many VSTs it needs its own section</h3>
+        <ul>
+          <li>Guitar: Guitar Rig 7</li>
+          <li>Bass: Blue Cat's Destructor</li>
+          <li>Drums: MODO DRUM 2</li>
+          <li>Synth: Surge XT</li>
+          <li>Strings: BBC Symphony Orchestra</li>
+          <li>Amen Break samples: <a href="https://archive.org/details/amen-breaks-compilation">these ones</a></li>
+          <li>Piano: EZkeys 2</li>
+          <li>Denoiser: Bertom Denoiser Pro</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> devoReal. All shenanigans reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/theme.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
