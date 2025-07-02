@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>devoReal's contacts</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <nav>
+    <button class="theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+    </button>
+    <div class="container">
+      <a href="index.html" class="logo">devoReal</a>
+      <ul>
+        <li><a href="index.html#about">about</a></li>
+        <li><a href="index.html#shenanigans">shenanigans</a></li>
+        <li><a href="index.html#links">links</a></li>
+        <li><a href="index.html#update">site updates</a></li>
+        <li><a href="music.html">music and wips</a></li>
+        <li><a href="contacts.html" class="active">contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="section container" style="padding-top: 6rem;">
+    <h1>contact me</h1>
+    <p>if you want to get in touch, here are some ways:</p>
+    <br></br>
+    <li><i class="fas fa-envelope"></i> devorealwastaken@gmail.com</li>
+    <li><i class="fab fa-discord"></i> .devoreal</li>
+    <li><i class="fab fa-github"></i> devo-real</li>
+    <li><i class="fab fa-youtube"></i> @devo-real</li>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> devoReal. All shenanigans reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/theme.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
